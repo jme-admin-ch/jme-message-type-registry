@@ -1,0 +1,29 @@
+@namespace("ch.admin.bit.jeap.jme.processcontext.event.race.mobilecheckpoint.passed")
+protocol JmeRaceMobileCheckpointPassedEventProtocol {
+  import idl "DomainEventBaseTypes.avdl";
+
+  record JmeRaceMobileCheckpointReference {
+    string type;
+    string checkpoint;
+  }
+
+  record JmeRaceMobileCheckpointPassedEventReferences {
+    JmeRaceMobileCheckpointReference checkpoint;
+  }
+
+  record JmeRaceMobileCheckpointPassedEventPayload {
+     string taskId;
+     string state;
+     timestamp_ms controlDate;
+   }
+
+  record JmeRaceMobileCheckpointPassedEvent {
+    ch.admin.bit.jeap.domainevent.avro.AvroDomainEventIdentity identity;
+    ch.admin.bit.jeap.domainevent.avro.AvroDomainEventType type;
+    ch.admin.bit.jeap.domainevent.avro.AvroDomainEventPublisher publisher;
+    JmeRaceMobileCheckpointPassedEventReferences references;
+    JmeRaceMobileCheckpointPassedEventPayload payload;
+    string domainEventVersion;
+    string processId;
+  }
+}

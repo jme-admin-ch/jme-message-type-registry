@@ -1,0 +1,19 @@
+{
+  "eventName": "JmeRaceCarRefuellingCompletedEvent",
+  "description": "Racer car is fuelled up.",
+  "publishingSystem": "JME",
+  "topic": "jme-race-refuelling-completed",
+  "scope": "internal",
+  "versions": [
+    {
+      "version": "1.0.0",
+      "valueSchema": "JmeRaceCarRefuellingCompletedEvent_v1.avdl",
+      "compatibilityMode": "BACKWARD"
+    },
+    {
+      "version": "2.0.0",
+      "valueSchema": "JmeRaceCarRefuellingCompletedEvent_v2.avdl",
+      "compatibilityMode": "FULL"
+    }
+  ]
+}

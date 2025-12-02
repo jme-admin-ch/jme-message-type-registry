@@ -1,0 +1,22 @@
+@namespace("ch.admin.bit.jeap.jme.processcontext.event.race.controlpoint.passed")
+protocol JmeRaceControlpointPassedEventProtocol {
+  import idl "DomainEventBaseTypes.avdl";
+
+  record JmeRaceControlpointReference {
+    string type;
+    string controlPoint;
+  }
+
+  record JmeRaceControlpointPassedEventReferences {
+    JmeRaceControlpointReference controlPoint;
+  }
+
+  record JmeRaceControlpointPassedEvent {
+    ch.admin.bit.jeap.domainevent.avro.AvroDomainEventIdentity identity;
+    ch.admin.bit.jeap.domainevent.avro.AvroDomainEventType type;
+    ch.admin.bit.jeap.domainevent.avro.AvroDomainEventPublisher publisher;
+    JmeRaceControlpointPassedEventReferences references;
+    string domainEventVersion;
+    string processId;
+  }
+}

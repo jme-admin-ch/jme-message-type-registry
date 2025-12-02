@@ -1,0 +1,13 @@
+{
+  "eventName": "JmeOrderPreparedEvent",
+  "description": "Order prepared (sequential inbox example)",
+  "publishingSystem": "JME",
+  "topic": "jme-order-prepared",
+  "scope": "public",
+  "versions": [
+    {
+      "version": "1.0.0",
+      "valueSchema": "JmeOrderPreparedEvent_v1.avdl"
+    }
+  ]
+}

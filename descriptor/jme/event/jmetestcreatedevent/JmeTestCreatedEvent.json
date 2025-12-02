@@ -1,0 +1,23 @@
+{
+  "eventName": "JmeTestCreatedEvent",
+  "description": "Test event to be deleted",
+  "publishingSystem": "JME",
+  "topic": "jme-test-created",
+  "scope": "public",
+  "versions": [
+    {
+      "version": "0.0.1",
+      "valueSchema": "JmeTestCreatedEvent_v1.avdl"
+    },
+    {
+      "version": "0.0.2",
+      "valueSchema": "JmeTestCreatedEvent_v2.avdl",
+      "compatibilityMode": "FULL"
+    },
+    {
+      "version": "0.0.3",
+      "valueSchema": "JmeTestCreatedEvent_v3.avdl",
+      "compatibilityMode": "FULL"
+    }
+  ]
+}

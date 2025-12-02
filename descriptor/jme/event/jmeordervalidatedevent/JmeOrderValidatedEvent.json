@@ -1,0 +1,18 @@
+{
+  "eventName": "JmeOrderValidatedEvent",
+  "description": "Order validated (sequential inbox example)",
+  "publishingSystem": "JME",
+  "topic": "jme-order-validated",
+  "scope": "public",
+  "versions": [
+    {
+      "version": "1.0.0",
+      "valueSchema": "JmeOrderValidatedEvent_v1.avdl"
+    },
+    {
+      "version": "1.1.0",
+      "valueSchema": "JmeOrderValidatedEvent_v1.1.0.avdl",
+      "compatibilityMode": "FORWARD"
+    }
+  ]
+}

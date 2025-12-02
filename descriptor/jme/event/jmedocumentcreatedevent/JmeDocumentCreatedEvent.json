@@ -1,0 +1,15 @@
+{
+  "eventName": "JmeDocumentCreatedEvent",
+  "publishingSystem": "JME",
+  "description": "Notification that a document has been created",
+  "documentationUrl": "https://confluence.bit.admin.ch/display/JEAP/TODO",
+  "topic": "jme-document-created",
+  "scope": "internal",
+  "versions": [
+    {
+      "version": "1.0.0",
+      "valueSchema": "JmeDocumentCreatedEvent_v1.0.0.avdl",
+      "compatibilityMode": "FORWARD"
+    }
+  ]
+}

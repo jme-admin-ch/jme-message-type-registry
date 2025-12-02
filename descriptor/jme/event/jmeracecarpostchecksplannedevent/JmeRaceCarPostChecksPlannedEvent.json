@@ -1,0 +1,14 @@
+{
+  "eventName": "JmeRaceCarPostChecksPlannedEvent",
+  "description": "At least one post-check was planned for a race car",
+  "publishingSystem": "JME",
+  "scope": "internal",
+  "topic": "jme-race-carpostchecks-planned",
+  "versions": [
+    {
+      "version": "1.0.0",
+      "valueSchema": "JmeRaceCarPostChecksPlannedEvent_v1.avdl",
+      "compatibilityMode": "BACKWARD"
+    }
+  ]
+}

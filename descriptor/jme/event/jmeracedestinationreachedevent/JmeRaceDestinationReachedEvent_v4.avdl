@@ -1,0 +1,29 @@
+@namespace("ch.admin.bit.jeap.jme.processcontext.event.race.destination.reached")
+protocol JmeRaceDestinationReachedEventProtocol {
+  import idl "DomainEventBaseTypes.avdl";
+
+  record ProcessReference {
+        string type = "processReference";
+        string processId;
+    }
+
+  record ParkingReference {
+    string type = "parkingReference";
+    int parkingSpotNumber;
+  }
+
+  record JmeRaceDestinationReachedEventReferences {
+    ProcessReference processReference;
+    ParkingReference? parkingReference = null;
+  }
+
+  record JmeRaceDestinationReachedEvent {
+    ch.admin.bit.jeap.domainevent.avro.AvroDomainEventIdentity identity;
+    ch.admin.bit.jeap.domainevent.avro.AvroDomainEventType type;
+    ch.admin.bit.jeap.domainevent.avro.AvroDomainEventPublisher publisher;
+    ch.admin.bit.jeap.domainevent.avro.AvroDomainEventUser? user = null;
+    JmeRaceDestinationReachedEventReferences references;
+    string domainEventVersion;
+    string processId;
+  }
+}

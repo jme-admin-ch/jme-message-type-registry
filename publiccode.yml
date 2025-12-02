@@ -1,0 +1,36 @@
+publiccodeYmlVersion: 0.4.0
+name: jme-message-type-registry
+applicationSuite: JME
+softwareVersion: 1.0.0
+releaseDate: 2025-12-02
+url: "https://github.com/jme-admin-ch/jme-message-type-registry.git"
+landingURL: "https://github.com/jme-admin-ch/jme"
+platforms:
+  - web
+categories:
+  - application-development
+developmentStatus: stable
+softwareType: library
+organisation:
+  uri: https://ld.admin.ch/office/V.1.7
+  name: Federal Office of Information Technology, Systems and Telecommunication
+description:
+  en:
+    localisedName: jme-message-type-registry
+    shortDescription: Message type registry containing JME message types produced or consumed by JME services.
+    longDescription: >
+      This message type registry contains definitions of JME message types produced or consumed by JME services.
+      This is used for example by the JME Process Context Example and the JME Message Exchange Example.
+    features:
+      - Message type definitions for JME services and libraries
+legal:
+  license: Apache-2.0
+maintenance:
+  type: internal
+  contacts:
+    - name: Federal Office of Information Technology, Systems and Telecommunication FOITT
+      email: jeap-community@bit.admin.ch
+localisation:
+  localisationReady: false
+  availableLanguages:
+    - en

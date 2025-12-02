@@ -1,0 +1,23 @@
+@namespace("ch.admin.bit.jme.document")
+protocol JmeDocumentReviewedEventProtocol {
+  import idl "DomainEventBaseTypes.avdl";
+  import idl "ch.admin.bit.jme.document.DocumentReference.avdl";
+
+  record JmeDocumentReviewedEventReferences {
+    DocumentReference documentReference;
+  }
+
+  record JmeDocumentReviewedEventPayload {
+    string status;
+  }
+
+  record JmeDocumentReviewedEvent {
+    ch.admin.bit.jeap.domainevent.avro.AvroDomainEventIdentity identity;
+    ch.admin.bit.jeap.domainevent.avro.AvroDomainEventType type;
+    ch.admin.bit.jeap.domainevent.avro.AvroDomainEventPublisher publisher;
+    JmeDocumentReviewedEventReferences references;
+    JmeDocumentReviewedEventPayload payload;
+    string processId;
+    string domainEventVersion = "1.1.0";
+  }
+}

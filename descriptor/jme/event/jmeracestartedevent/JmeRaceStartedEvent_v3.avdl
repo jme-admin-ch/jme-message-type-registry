@@ -1,0 +1,35 @@
+@namespace("ch.admin.bit.jeap.jme.processcontext.event.race.started")
+protocol JmeRaceStartedEventProtocol {
+  import idl "DomainEventBaseTypes.avdl";
+
+  record JmeRaceCarReference {
+    string type;
+    string raceCarId;
+  }
+
+  record JmeRaceReference {
+    string type;
+    string raceId;
+  }
+
+  record JmeWeatherAlertSubjectReference {
+    string type;
+    string weatherAlertSubject;
+    union {null, string} test = null;
+  }
+
+  record JmeRaceStartedEventReferences {
+    JmeRaceReference raceReference;
+    JmeRaceCarReference raceCarReference;
+    union {null, JmeWeatherAlertSubjectReference} weatherAlertSubjectReference = null;
+  }
+
+  record JmeRaceStartedEvent {
+    ch.admin.bit.jeap.domainevent.avro.AvroDomainEventIdentity identity;
+    ch.admin.bit.jeap.domainevent.avro.AvroDomainEventType type;
+    ch.admin.bit.jeap.domainevent.avro.AvroDomainEventPublisher publisher;
+    JmeRaceStartedEventReferences references;
+    string domainEventVersion;
+    string processId;
+  }
+}

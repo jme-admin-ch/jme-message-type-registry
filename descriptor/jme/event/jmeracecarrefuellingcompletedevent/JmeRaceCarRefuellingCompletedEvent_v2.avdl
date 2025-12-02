@@ -1,0 +1,22 @@
+@namespace("ch.admin.bit.jeap.jme.processcontext.event.race.carmaintenance.refuelling.completed")
+protocol JmeRaceCarRefuellingCompletedEventProtocol {
+  import idl "DomainEventBaseTypes.avdl";
+
+  record JmeRaceCarRefuellingCompletedEventReferences {
+  }
+
+  record JmeRaceCarRefuellingCompletedEventPayload {
+    string fuelType;
+    int fuelAmount;
+  }
+
+  record JmeRaceCarRefuellingCompletedEvent {
+    ch.admin.bit.jeap.domainevent.avro.AvroDomainEventIdentity identity;
+    ch.admin.bit.jeap.domainevent.avro.AvroDomainEventType type;
+    ch.admin.bit.jeap.domainevent.avro.AvroDomainEventPublisher publisher;
+    JmeRaceCarRefuellingCompletedEventReferences references;
+    JmeRaceCarRefuellingCompletedEventPayload? payload = null;
+    string domainEventVersion;
+    string processId;
+  }
+}

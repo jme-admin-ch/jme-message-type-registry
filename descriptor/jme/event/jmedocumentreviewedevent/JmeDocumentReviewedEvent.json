@@ -1,0 +1,15 @@
+{
+  "eventName": "JmeDocumentReviewedEvent",
+  "publishingSystem": "JME",
+  "description": "Notification that a document has been reviewed",
+  "documentationUrl": "https://confluence.bit.admin.ch/display/JEAP/TODO",
+  "topic": "jme-document-reviewed",
+  "scope": "internal",
+  "versions": [
+    {
+      "version": "1.0.0",
+      "valueSchema": "JmeDocumentReviewedEvent_v1.0.0.avdl",
+      "compatibilityMode": "FORWARD"
+    }
+  ]
+}
