@@ -1,0 +1,18 @@
+{
+  "eventName": "JmeRaceControlpointPassedEvent",
+  "description": "Racer passed a control point",
+  "publishingSystem": "JME",
+  "scope": "internal",
+  "topic": "jme-race-controlpoint-passed",
+  "versions": [
+    {
+      "version": "1.1.0",
+      "valueSchema": "JmeRaceControlpointPassedEvent_v1.avdl"
+    },
+    {
+      "version": "1.1.1",
+      "valueSchema": "JmeRaceControlpointPassedEvent_v1.1.1.avdl",
+      "compatibilityMode": "BACKWARD"
+    }
+  ]
+}

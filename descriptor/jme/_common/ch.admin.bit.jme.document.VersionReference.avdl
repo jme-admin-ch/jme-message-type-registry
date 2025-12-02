@@ -1,0 +1,8 @@
+@namespace("ch.admin.bit.jme.document")
+protocol VersionReferenceProtocol {
+  record VersionReference {
+    string id;
+    string versionNumber;
+    string type;
+  }
+}

@@ -1,0 +1,22 @@
+@namespace("ch.admin.bit.jeap.jme.processcontext.event.race.objects.spotted")
+protocol JmeRaceObjectsOnRoadSpottedEventProtocol {
+  import idl "DomainEventBaseTypes.avdl";
+
+  record JmeRaceObjectsOnRoadSpottedEventReferences {
+
+  }
+
+  record JmeRaceObjectsOnRoadSpottedEventPayload {
+    boolean triggerSafetyCar = false;
+  }
+
+  record JmeRaceObjectsOnRoadSpottedEvent {
+    ch.admin.bit.jeap.domainevent.avro.AvroDomainEventIdentity identity;
+    ch.admin.bit.jeap.domainevent.avro.AvroDomainEventType type;
+    ch.admin.bit.jeap.domainevent.avro.AvroDomainEventPublisher publisher;
+    JmeRaceObjectsOnRoadSpottedEventReferences references;
+    union {null, JmeRaceObjectsOnRoadSpottedEventPayload} payload = null;
+    string domainEventVersion;
+    string processId;
+  }
+}

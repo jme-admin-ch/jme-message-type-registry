@@ -1,0 +1,19 @@
+@namespace("ch.admin.bit.jme.messaging.event.order.validated")
+protocol JmeOrderValidatedEventProtocol {
+	import idl "DomainEventBaseTypes.avdl";
+	import idl "ch.admin.bit.jme.messaging.OrderReference.avdl";
+
+	record JmeOrderValidatedReferences {
+		ch.admin.bit.jme.messaging.OrderReference reference;
+	}
+
+	record JmeOrderValidatedEvent {
+		ch.admin.bit.jeap.domainevent.avro.AvroDomainEventIdentity identity;
+		ch.admin.bit.jeap.domainevent.avro.AvroDomainEventType type;
+		ch.admin.bit.jeap.domainevent.avro.AvroDomainEventPublisher publisher;
+		ch.admin.bit.jeap.domainevent.avro.AvroDomainEventUser? user = null;
+		JmeOrderValidatedReferences references;
+		string domainEventVersion;
+		string processId;
+	}
+}

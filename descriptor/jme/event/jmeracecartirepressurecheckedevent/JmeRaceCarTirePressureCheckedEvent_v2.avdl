@@ -1,0 +1,24 @@
+@namespace("ch.admin.bit.jeap.jme.processcontext.event.race.carmaintenance.tirepressure.checked")
+protocol JmeRaceCarTirePressureCheckedEventProtocol {
+  import idl "DomainEventBaseTypes.avdl";
+  import idl "ch.admin.bit.jme.processcontext.race.maintenance.MaintenanceReference.avdl";
+
+  record TireReference {
+    string type = "tire";
+    string tireId;
+  }
+
+  record JmeRaceCarTirePressureCheckedEventReferences {
+    ch.admin.bit.jme.processcontext.race.maintenance.MaintenanceReference maintenanceReference;
+    TireReference tireReference;
+  }
+
+  record JmeRaceCarTirePressureCheckedEvent {
+    ch.admin.bit.jeap.domainevent.avro.AvroDomainEventIdentity identity;
+    ch.admin.bit.jeap.domainevent.avro.AvroDomainEventType type;
+    ch.admin.bit.jeap.domainevent.avro.AvroDomainEventPublisher publisher;
+    JmeRaceCarTirePressureCheckedEventReferences references;
+    string domainEventVersion;
+    string processId;
+  }
+}

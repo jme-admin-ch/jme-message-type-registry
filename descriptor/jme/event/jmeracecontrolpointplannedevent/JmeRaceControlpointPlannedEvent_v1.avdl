@@ -1,0 +1,17 @@
+@namespace("ch.admin.bit.jeap.jme.processcontext.event.race.controlpoint.planned")
+protocol JmeRaceControlpointPlannedEventProtocol {
+  import idl "DomainEventBaseTypes.avdl";
+
+  record JmeRaceControlpointPlannedEventPayload {
+    array<string> controlPoints;
+  }
+
+  record JmeRaceControlpointPlannedEvent {
+    ch.admin.bit.jeap.domainevent.avro.AvroDomainEventIdentity identity;
+    ch.admin.bit.jeap.domainevent.avro.AvroDomainEventType type;
+    ch.admin.bit.jeap.domainevent.avro.AvroDomainEventPublisher publisher;
+    JmeRaceControlpointPlannedEventPayload payload;
+    string domainEventVersion;
+    string processId;
+  }
+}

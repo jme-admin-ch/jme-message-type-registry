@@ -1,0 +1,18 @@
+{
+  "eventName": "JmeRaceObjectsOnRoadSpottedEvent",
+  "description": "Objects on roads spotted",
+  "publishingSystem": "JME",
+  "topic": "jme-race-objects-spotted",
+  "scope": "internal",
+  "versions": [
+    {
+      "version": "1.0.0",
+      "valueSchema": "JmeRaceObjectsOnRoadSpottedEvent_v1.avdl"
+    },
+    {
+      "version": "1.1.0",
+      "valueSchema": "JmeRaceObjectsOnRoadSpottedEvent_v2.avdl",
+      "compatibilityMode": "BACKWARD"
+    }
+  ]
+}

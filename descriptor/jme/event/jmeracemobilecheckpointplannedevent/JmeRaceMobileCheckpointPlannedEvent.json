@@ -1,0 +1,14 @@
+{
+  "eventName": "JmeRaceMobileCheckpointPlannedEvent",
+  "description": "At least one mobile control point was planned for a race",
+  "publishingSystem": "JME",
+  "scope": "internal",
+  "topic": "jme-race-mobilecheckpoint-planned",
+  "versions": [
+    {
+      "version": "1.0.0",
+      "valueSchema": "JmeRaceMobileCheckpointPlannedEvent_v1.avdl",
+      "compatibilityMode": "BACKWARD"
+    }
+  ]
+}

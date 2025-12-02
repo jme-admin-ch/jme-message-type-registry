@@ -1,0 +1,14 @@
+{
+  "eventName": "JmeRaceControlpointPlannedEvent",
+  "description": "At least one control point was planned for a race",
+  "publishingSystem": "JME",
+  "scope": "internal",
+  "topic": "jme-race-controlpoint-planned",
+  "versions": [
+    {
+      "version": "1.0.0",
+      "valueSchema": "JmeRaceControlpointPlannedEvent_v1.avdl",
+      "compatibilityMode": "BACKWARD"
+    }
+  ]
+}

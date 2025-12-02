@@ -1,0 +1,28 @@
+@namespace("ch.admin.bit.jme.crypto")
+protocol JmeGameReviewCreatedEventProtocol {
+  import idl "DomainEventBaseTypes.avdl";
+
+  record JmeGameReviewAuthorReference {
+    string type = "author";
+    string reviewAuthor;
+  }
+
+  record JmeGameReviewCreatedEventReferences {
+      JmeGameReviewAuthorReference author;
+  }
+
+  record JmeGameReviewCreatedEventPayload {
+    string reviewId;
+    string reviewText;
+  }
+
+  record JmeGameReviewCreatedEvent {
+    ch.admin.bit.jeap.domainevent.avro.AvroDomainEventIdentity identity;
+    ch.admin.bit.jeap.domainevent.avro.AvroDomainEventType type;
+    ch.admin.bit.jeap.domainevent.avro.AvroDomainEventPublisher publisher;
+    JmeGameReviewCreatedEventReferences references;
+    JmeGameReviewCreatedEventPayload payload;
+    union {null, string} processId = null;
+    string domainEventVersion = "1.1.0";
+  }
+}

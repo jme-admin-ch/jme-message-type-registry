@@ -1,0 +1,22 @@
+{
+  "eventName": "JmeRaceCarPostChecksCompletedEvent",
+  "description": "Post race checks on selected cars were completed.",
+  "publishingSystem": "JME",
+  "scope": "internal",
+  "topic": "jme-race-carpostchecks-completed",
+  "versions": [
+    {
+      "version": "1.0.0",
+      "valueSchema": "JmeRaceCarPostChecksCompletedEvent_v1.0.0.avdl"
+    },
+    {
+      "version": "1.0.1",
+      "valueSchema": "JmeRaceCarPostChecksCompletedEvent_v1.0.1.avdl"
+    },
+    {
+      "version": "1.0.2",
+      "valueSchema": "JmeRaceCarPostChecksCompletedEvent_v1.0.2.avdl",
+      "compatibilityMode": "BACKWARD"
+    }
+  ]
+}

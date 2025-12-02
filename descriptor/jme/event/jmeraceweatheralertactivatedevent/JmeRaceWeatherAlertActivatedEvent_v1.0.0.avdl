@@ -1,0 +1,22 @@
+@namespace("ch.admin.bit.jeap.jme.processcontext.event.race.wather.alert.activated")
+protocol JmeRaceWeatherAlertActivatedEventRecord {
+  import idl "DomainEventBaseTypes.avdl";
+
+  record WeatherAlertReference {
+    string type = "weatherAlertId";
+    string weatherAlertId;
+    string weatherAlertSubject;
+  }
+
+  record WeatherAlertReferences {
+    WeatherAlertReference weatherAlertReference;
+  }
+
+  record JmeRaceWeatherAlertActivatedEvent {
+    ch.admin.bit.jeap.domainevent.avro.AvroDomainEventIdentity identity;
+    ch.admin.bit.jeap.domainevent.avro.AvroDomainEventType type;
+    ch.admin.bit.jeap.domainevent.avro.AvroDomainEventPublisher publisher;
+    WeatherAlertReferences references;
+    string domainEventVersion;
+  }
+}

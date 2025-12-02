@@ -1,0 +1,14 @@
+{
+  "commandName": "JmeCancelRaceCommand",
+  "description": "Race committee decided to cancel an ongoing race",
+  "definingSystem": "JME",
+  "topic": "jme-race-cancelrace",
+  "scope": "internal",
+  "versions": [
+    {
+      "version": "1.0.0",
+      "valueSchema": "JmeCancelRaceCommand_v1.0.0.avdl",
+      "compatibilityMode": "BACKWARD"
+    }
+  ]
+}

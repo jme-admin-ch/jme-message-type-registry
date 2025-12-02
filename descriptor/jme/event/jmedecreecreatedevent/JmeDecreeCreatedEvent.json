@@ -1,0 +1,15 @@
+{
+  "eventName": "JmeDecreeCreatedEvent",
+  "publishingSystem": "JME",
+  "description": "Notification that a decree has been created.",
+  "documentationUrl": "https://confluence.bit.admin.ch/display/JEAP/TODO",
+  "topic": "jme-process-archive-decreecreated",
+  "scope": "internal",
+  "versions": [
+    {
+      "version": "1.0.0",
+      "valueSchema": "JmeDecreeCreatedEvent_v1.0.0.avdl",
+      "compatibilityMode": "FORWARD"
+    }
+  ]
+}

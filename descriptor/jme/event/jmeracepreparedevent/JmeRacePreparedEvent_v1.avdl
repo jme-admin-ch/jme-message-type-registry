@@ -1,0 +1,21 @@
+@namespace("ch.admin.bit.jeap.jme.processcontext.event.race.prepared")
+protocol JmeRacePreparedEventProtocol {
+  import idl "DomainEventBaseTypes.avdl";
+
+  record JmeRacePreparedEventReferences {}
+
+  record JmeRacePreparedEventPayload {
+    string raceId;
+    string raceCarNumber;
+  }
+
+  record JmeRacePreparedEvent {
+    ch.admin.bit.jeap.domainevent.avro.AvroDomainEventIdentity identity;
+    ch.admin.bit.jeap.domainevent.avro.AvroDomainEventType type;
+    ch.admin.bit.jeap.domainevent.avro.AvroDomainEventPublisher publisher;
+    JmeRacePreparedEventReferences references;
+    JmeRacePreparedEventPayload payload;
+    string processId;
+    string domainEventVersion = "1.1.0";
+  }
+}

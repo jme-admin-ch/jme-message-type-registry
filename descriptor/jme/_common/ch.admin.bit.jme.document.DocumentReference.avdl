@@ -1,0 +1,7 @@
+@namespace("ch.admin.bit.jme.document")
+protocol DocumentReferenceProtocol {
+  record DocumentReference {
+    string id;
+    string type;
+  }
+}
