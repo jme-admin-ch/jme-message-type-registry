@@ -1,0 +1,14 @@
+{
+  "eventName": "JmeRaceWeatherAlertActivatedEvent",
+  "description": "Weather alert activated for a race course",
+  "publishingSystem": "JME",
+  "topic": "jme-race-weather-alert-activated",
+  "scope": "public",
+  "versions": [
+    {
+      "version": "1.0.0",
+      "valueSchema": "JmeRaceWeatherAlertActivatedEvent_v1.0.0.avdl",
+      "compatibilityMode": "BACKWARD"
+    }
+  ]
+}

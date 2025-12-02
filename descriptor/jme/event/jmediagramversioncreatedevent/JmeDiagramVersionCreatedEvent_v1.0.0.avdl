@@ -1,0 +1,23 @@
+@namespace("ch.admin.bit.jme.diagram")
+protocol JmeDiagramVersionCreatedEventProtocol {
+  import idl "DomainEventBaseTypes.avdl";
+
+  record JmeDiagramReference {
+    string type = "Diagram";
+    string id;
+    string version;
+  }
+
+  record JmeDiagramVersionCreatedEventReferences {
+    JmeDiagramReference newDiagramVersion;
+  }
+
+  record JmeDiagramVersionCreatedEvent {
+    ch.admin.bit.jeap.domainevent.avro.AvroDomainEventIdentity identity;
+    ch.admin.bit.jeap.domainevent.avro.AvroDomainEventType type;
+    ch.admin.bit.jeap.domainevent.avro.AvroDomainEventPublisher publisher;
+    JmeDiagramVersionCreatedEventReferences references;
+    string processId;
+    string domainEventVersion = "1.1.0";
+  }
+}

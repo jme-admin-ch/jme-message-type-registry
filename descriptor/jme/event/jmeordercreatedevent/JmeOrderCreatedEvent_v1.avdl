@@ -1,0 +1,24 @@
+@namespace("ch.admin.bit.jme.messaging.event.order.created")
+protocol JmeOrderCreatedEventProtocol {
+	import idl "DomainEventBaseTypes.avdl";
+	import idl "ch.admin.bit.jme.messaging.OrderReference.avdl";
+
+	record JmeOrderCreatedReferences {
+		ch.admin.bit.jme.messaging.OrderReference reference;
+	}
+
+	record JmeOrderCreatedPayload {
+		string orderType;
+	}
+
+	record JmeOrderCreatedEvent {
+		ch.admin.bit.jeap.domainevent.avro.AvroDomainEventIdentity identity;
+		ch.admin.bit.jeap.domainevent.avro.AvroDomainEventType type;
+		ch.admin.bit.jeap.domainevent.avro.AvroDomainEventPublisher publisher;
+		ch.admin.bit.jeap.domainevent.avro.AvroDomainEventUser? user = null;
+		JmeOrderCreatedReferences references;
+		JmeOrderCreatedPayload payload;
+		string domainEventVersion;
+		string processId;
+	}
+}

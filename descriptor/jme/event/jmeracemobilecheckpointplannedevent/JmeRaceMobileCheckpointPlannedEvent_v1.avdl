@@ -1,0 +1,17 @@
+@namespace("ch.admin.bit.jeap.jme.processcontext.event.race.mobilecheckpoint.planned")
+protocol JmeRaceMobileCheckpointPlannedEventProtocol {
+  import idl "DomainEventBaseTypes.avdl";
+
+  record JmeRaceMobileCheckpointPlannedEventPayload {
+    array<string> checkpoints;
+   }
+
+  record JmeRaceMobileCheckpointPlannedEvent {
+    ch.admin.bit.jeap.domainevent.avro.AvroDomainEventIdentity identity;
+    ch.admin.bit.jeap.domainevent.avro.AvroDomainEventType type;
+    ch.admin.bit.jeap.domainevent.avro.AvroDomainEventPublisher publisher;
+    JmeRaceMobileCheckpointPlannedEventPayload payload;
+    string domainEventVersion;
+    string processId;
+  }
+}

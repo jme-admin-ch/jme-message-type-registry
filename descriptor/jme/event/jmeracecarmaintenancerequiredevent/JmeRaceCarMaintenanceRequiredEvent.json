@@ -1,0 +1,18 @@
+{
+  "eventName": "JmeRaceCarMaintenanceRequiredEvent",
+  "description": "Racecar needs a maintenance stop",
+  "publishingSystem": "JME",
+  "topic": "jme-race-maintenance-required",
+  "scope": "internal",
+  "versions": [
+    {
+      "version": "1.0.0",
+      "valueSchema": "JmeRaceCarMaintenanceRequiredEvent_v1.avdl"
+    },
+    {
+      "version": "2.0.0",
+      "valueSchema": "JmeRaceCarMaintenanceRequiredEvent_v2.avdl",
+      "compatibilityMode": "BACKWARD"
+    }
+  ]
+}

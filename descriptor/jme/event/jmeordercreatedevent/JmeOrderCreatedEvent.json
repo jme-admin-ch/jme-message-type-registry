@@ -1,0 +1,13 @@
+{
+  "eventName": "JmeOrderCreatedEvent",
+  "description": "Order created (sequential inbox example)",
+  "publishingSystem": "JME",
+  "topic": "jme-order-created",
+  "scope": "public",
+  "versions": [
+    {
+      "version": "1.0.0",
+      "valueSchema": "JmeOrderCreatedEvent_v1.avdl"
+    }
+  ]
+}

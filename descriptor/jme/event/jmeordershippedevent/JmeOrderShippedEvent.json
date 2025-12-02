@@ -1,0 +1,13 @@
+{
+  "eventName": "JmeOrderShippedEvent",
+  "description": "Order shipped (sequential inbox example)",
+  "publishingSystem": "JME",
+  "topic": "jme-order-shipped",
+  "scope": "public",
+  "versions": [
+    {
+      "version": "1.0.0",
+      "valueSchema": "JmeOrderShippedEvent_v1.avdl"
+    }
+  ]
+}

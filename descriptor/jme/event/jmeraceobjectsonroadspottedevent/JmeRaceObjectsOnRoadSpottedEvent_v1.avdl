@@ -1,0 +1,17 @@
+@namespace("ch.admin.bit.jeap.jme.processcontext.event.race.objects.spotted")
+protocol JmeRaceObjectsOnRoadSpottedEventProtocol {
+  import idl "DomainEventBaseTypes.avdl";
+
+  record JmeRaceObjectsOnRoadSpottedEventReferences {
+
+  }
+
+  record JmeRaceObjectsOnRoadSpottedEvent {
+    ch.admin.bit.jeap.domainevent.avro.AvroDomainEventIdentity identity;
+    ch.admin.bit.jeap.domainevent.avro.AvroDomainEventType type;
+    ch.admin.bit.jeap.domainevent.avro.AvroDomainEventPublisher publisher;
+    JmeRaceObjectsOnRoadSpottedEventReferences references;
+    string domainEventVersion;
+    string processId;
+  }
+}

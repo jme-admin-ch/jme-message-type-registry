@@ -1,0 +1,7 @@
+@namespace("ch.admin.bit.jme.messaging")
+protocol OrderReferenceProtocol {
+  record OrderReference {
+    string type;
+    string orderId;
+  }
+}

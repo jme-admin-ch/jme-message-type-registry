@@ -1,0 +1,18 @@
+@namespace("ch.admin.bit.jeap.jme.processcontext.event.race.carmaintenance.required")
+protocol JmeRaceCarMaintenanceRequiredEventProtocol {
+  import idl "DomainEventBaseTypes.avdl";
+  import idl "ch.admin.bit.jme.processcontext.race.maintenance.MaintenanceReference.avdl";
+
+  record JmeRaceCarMaintenanceRequiredEventReferences {
+    ch.admin.bit.jme.processcontext.race.maintenance.MaintenanceReference maintenanceReference;
+  }
+
+  record JmeRaceCarMaintenanceRequiredEvent {
+    ch.admin.bit.jeap.domainevent.avro.AvroDomainEventIdentity identity;
+    ch.admin.bit.jeap.domainevent.avro.AvroDomainEventType type;
+    ch.admin.bit.jeap.domainevent.avro.AvroDomainEventPublisher publisher;
+    JmeRaceCarMaintenanceRequiredEventReferences references;
+    string domainEventVersion;
+    string processId;
+  }
+}

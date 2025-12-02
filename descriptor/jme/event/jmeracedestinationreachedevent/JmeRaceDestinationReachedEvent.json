@@ -1,0 +1,32 @@
+{
+  "eventName": "JmeRaceDestinationReachedEvent",
+  "description": "Racer reached destination",
+  "publishingSystem": "JME",
+  "topic": "jme-race-destination-reached",
+  "scope": "internal",
+  "versions": [
+    {
+      "version": "1.1.0",
+      "valueSchema": "JmeRaceDestinationReachedEvent_v1.avdl"
+    },
+    {
+      "version": "2.0.0",
+      "valueSchema": "JmeRaceDestinationReachedEvent_v2.avdl"
+    },
+    {
+      "version": "2.0.1",
+      "valueSchema": "JmeRaceDestinationReachedEvent_v2.avdl",
+      "compatibilityMode": "NONE"
+    },
+    {
+      "version": "3.0.0",
+      "valueSchema": "JmeRaceDestinationReachedEvent_v3.avdl",
+      "compatibilityMode": "BACKWARD"
+    },
+    {
+      "version": "4.0.0",
+      "valueSchema": "JmeRaceDestinationReachedEvent_v4.avdl",
+      "compatibilityMode": "FULL"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "eventName": "JmeRaceMobileCheckpointPassedEvent",
+  "description": "Racer passed a mobile checkpoint",
+  "publishingSystem": "JME",
+  "scope": "internal",
+  "topic": "jme-race-mobilecheckpoint-passed",
+  "versions": [
+    {
+      "version": "1.1.0",
+      "valueSchema": "JmeRaceMobileCheckpointPassedEvent_v1.avdl"
+    },
+    {
+      "version": "1.2.0",
+      "valueSchema": "JmeRaceMobileCheckpointPassedEvent_v2.avdl"
+    },
+    {
+      "version": "1.2.1",
+      "valueSchema": "JmeRaceMobileCheckpointPassedEvent_v1.2.1.avdl",
+      "compatibilityMode": "BACKWARD"
+    }
+  ]
+}

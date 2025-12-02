@@ -1,0 +1,14 @@
+{
+  "eventName": "JmeRacePreparedEvent",
+  "publishingSystem": "JME",
+  "description": "Notification that a race has been prepared for a race car.",
+  "topic": "jme-race-prepared",
+  "scope": "internal",
+  "versions": [
+    {
+      "version": "1.0.0",
+      "valueSchema": "JmeRacePreparedEvent_v1.avdl",
+      "compatibilityMode": "BACKWARD"
+    }
+  ]
+}

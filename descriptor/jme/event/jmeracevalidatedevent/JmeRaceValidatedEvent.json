@@ -1,0 +1,19 @@
+{
+  "eventName": "JmeRaceValidatedEvent",
+  "description": "Race has been validated",
+  "publishingSystem": "JME",
+  "topic": "jme-race-validated",
+  "scope": "public",
+  "versions": [
+    {
+      "version": "1.0.0",
+      "valueSchema": "JmeRaceValidatedEvent_v1.avdl",
+      "compatibilityMode": "BACKWARD"
+    },
+    {
+      "version": "1.2.0",
+      "valueSchema": "JmeRaceValidatedEvent_v2.avdl",
+      "compatibilityMode": "BACKWARD"
+    }
+  ]
+}

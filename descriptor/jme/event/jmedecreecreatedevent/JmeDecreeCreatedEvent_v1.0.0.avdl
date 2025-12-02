@@ -1,0 +1,29 @@
+@namespace("ch.admin.bit.jme.decree")
+protocol JmeDecreeCreatedEventProtocol {
+  import idl "DomainEventBaseTypes.avdl";
+
+  record JmeDecreeReference {
+    string type = "Decree";
+    string id;
+  }
+
+  record JmeDecreeCreatedEventReferences {
+    JmeDecreeReference newDecree;
+  }
+
+  record JmeDecreeCreatedEventPayload {
+    string title;
+    string someDecreeData;
+    timestamp_ms createdAt;
+  }
+
+  record JmeDecreeCreatedEvent {
+    ch.admin.bit.jeap.domainevent.avro.AvroDomainEventIdentity identity;
+    ch.admin.bit.jeap.domainevent.avro.AvroDomainEventType type;
+    ch.admin.bit.jeap.domainevent.avro.AvroDomainEventPublisher publisher;
+    JmeDecreeCreatedEventReferences references;
+    JmeDecreeCreatedEventPayload payload;
+    string processId;
+    string domainEventVersion = "1.1.0";
+  }
+}

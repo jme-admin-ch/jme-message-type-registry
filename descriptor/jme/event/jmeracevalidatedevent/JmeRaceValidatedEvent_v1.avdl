@@ -1,0 +1,13 @@
+@namespace("ch.admin.bit.jeap.jme.processcontext.event.race.validated")
+protocol JmeRaceValidatedEventProtocol {
+  import idl "DomainEventBaseTypes.avdl";
+
+  record JmeRaceValidatedEvent {
+    ch.admin.bit.jeap.domainevent.avro.AvroDomainEventIdentity identity;
+    ch.admin.bit.jeap.domainevent.avro.AvroDomainEventType type;
+    ch.admin.bit.jeap.domainevent.avro.AvroDomainEventPublisher publisher;
+    string domainEventVersion;
+    string processId;
+  }
+
+}

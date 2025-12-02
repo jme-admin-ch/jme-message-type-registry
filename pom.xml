@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <name>${project.groupId}:${project.artifactId}</name>
+    <url>https://github.com/jme-admin-ch/jme-message-type-registry/tree/main</url>
+    <scm>
+        <url>https://github.com/jme-admin-ch/jme-message-type-registry/tree/master.git</url>
+        <connection>scm:git:git://github.com/jme-admin-ch/jme-message-type-registry.git</connection>
+        <developerConnection>scm:git:ssh://github.com:jme-admin-ch/jme-message-type-registry.git</developerConnection>
+    </scm>
+    <developers>
+        <developer>
+            <name>BIT</name>
+            <email>jeap-community@bit.admin.ch</email>
+            <organization>Federal Office of Information Technology, Systems and Telecommunication FOITT</organization>
+            <organizationUrl>https://www.bit.admin.ch/</organizationUrl>
+        </developer>
+    </developers>
+
+    <licenses>
+        <license>
+            <name>Apache License, Version 2.0</name>
+            <url>https://www.apache.org/licenses/LICENSE-2.0</url>
+        </license>
+    </licenses>
+
+    <parent>
+        <groupId>ch.admin.bit.jeap</groupId>
+        <artifactId>jeap-spring-boot-parent</artifactId>
+        <version>29.4.0</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
+
+    <groupId>ch.admin.bit.jme</groupId>
+    <artifactId>jme-message-type-registry</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <properties>
+        <jeap.messagetypes.compile.skip>false</jeap.messagetypes.compile.skip>
+        <!-- Do not deploy the pom artifact for jme-message-type-registry, this pom is only used to control the build -->
+        <maven.deploy.skip>true</maven.deploy.skip>
+        <java.version>21</java.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>ch.admin.bit.jeap</groupId>
+            <artifactId>jeap-messaging-avro</artifactId>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <!-- Add license entry to jar manifest -->
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-jar-plugin</artifactId>
+                    <configuration>
+                        <archive>
+                            <manifestEntries>
+                                <Bundle-License>https://www.apache.org/licenses/LICENSE-2.0</Bundle-License>
+                            </manifestEntries>
+                        </archive>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+        <plugins>
+            <!-- Check third-party license compliance -->
+            <plugin>
+                <groupId>org.honton.chas</groupId>
+                <artifactId>license-maven-plugin</artifactId>
+            </plugin>
+            <!-- Generate third-party license list -->
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>license-maven-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>ch.admin.bit.jeap</groupId>
+                <artifactId>jeap-messaging-registry-maven-plugin</artifactId>
+                <version>${jeap-messaging.version}</version>
+                <configuration>
+                    <gitUrl>https://bitbucket.bit.admin.ch/scm/bit_jme/jme-message-type-registry.git</gitUrl>
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>generateAvdl</goal>
+                            <goal>registry</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <plugin>
+                <groupId>io.github.git-commit-id</groupId>
+                <artifactId>git-commit-id-maven-plugin</artifactId>
+                <configuration>
+                    <skipPoms>false</skipPoms>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>ch.admin.bit.jeap</groupId>
+                <artifactId>jeap-messaging-avro-maven-plugin</artifactId>
+                <version>${jeap-messaging.version}</version>
+                <executions>
+                    <execution>
+                        <!-- Disable default execution from parent -->
+                        <phase>none</phase>
+                    </execution>
+                    <execution>
+                        <id>compile-message-types</id>
+                        <goals>
+                            <goal>compile-message-types</goal>
+                        </goals>
+                        <configuration>
+                            <generateAllMessageTypes>false</generateAllMessageTypes>
+                            <gitUrl>https://bitbucket.bit.admin.ch/scm/bit_jme/jme-message-type-registry.git</gitUrl>
+                            <jeapMessagingVersion>${jeap-messaging.version}</jeapMessagingVersion>
+                            <groupIdPrefix>ch.admin.bit.jme.messagetype</groupIdPrefix>
+                            <trunkBranchName>master</trunkBranchName>
+                            <skip>${jeap.messagetypes.compile.skip}</skip>
+                            <pomTemplateFile>messagetype.template.pom.xml</pomTemplateFile>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>deploy-message-type-artifacts</id>
+                        <goals>
+                            <goal>deploy-message-type-artifacts</goal>
+                        </goals>
+                        <configuration>
+                            <mavenDeployGoal>deploy</mavenDeployGoal>
+                            <parallel>false</parallel>
+                            <trunkBranchName>master</trunkBranchName>
+                            <trunkMavenProfile>maven-central-publish</trunkMavenProfile>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+</project>

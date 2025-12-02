@@ -1,0 +1,26 @@
+@namespace("ch.admin.bit.jeap.jme.processcontext.event.race.carpostchecks.completed")
+protocol JmeRaceCarPostChecksCompletedEventProtocol {
+  import idl "DomainEventBaseTypes.avdl";
+
+  record JmeRaceCarPostChecksCompletedEventReferences {}
+
+  record JmeRaceCarPostCheckResult {
+    string carNumber;
+    string report;
+  }
+
+  record JmeRaceCarPostChecksCompletedEventPayload {
+     string raceId;
+     array<JmeRaceCarPostCheckResult> results = [];
+   }
+
+  record JmeRaceCarPostChecksCompletedEvent {
+    ch.admin.bit.jeap.domainevent.avro.AvroDomainEventIdentity identity;
+    ch.admin.bit.jeap.domainevent.avro.AvroDomainEventType type;
+    ch.admin.bit.jeap.domainevent.avro.AvroDomainEventPublisher publisher;
+    JmeRaceCarPostChecksCompletedEventReferences references;
+    JmeRaceCarPostChecksCompletedEventPayload payload;
+    string domainEventVersion;
+    union {null, string} processId = null;
+  }
+}

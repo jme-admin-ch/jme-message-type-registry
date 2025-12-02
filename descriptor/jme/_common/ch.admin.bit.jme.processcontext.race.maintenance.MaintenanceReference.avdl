@@ -1,0 +1,7 @@
+@namespace("ch.admin.bit.jme.processcontext.race.maintenance")
+protocol MaintenanceReferenceProtocol {
+  record MaintenanceReference {
+    string type = "maintenance";
+    string maintenanceId;
+  }
+}

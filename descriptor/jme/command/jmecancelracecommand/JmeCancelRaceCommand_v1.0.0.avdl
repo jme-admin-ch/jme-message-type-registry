@@ -1,0 +1,22 @@
+@namespace("ch.admin.bit.jeap.jme.processcontext.command.race.cancel")
+protocol JmeCancelRaceCommandProtocol {
+  import idl "MessagingBaseTypes.avdl";
+
+  record JmeRaceReference {
+    string type;
+    string raceId;
+  }
+
+  record JmeCancelRaceCommandReferences {
+    JmeRaceReference raceReference;
+  }
+
+  record JmeCancelRaceCommand {
+    ch.admin.bit.jeap.messaging.avro.AvroMessageIdentity identity;
+    ch.admin.bit.jeap.messaging.avro.AvroMessageType type;
+    ch.admin.bit.jeap.messaging.avro.AvroMessagePublisher publisher;
+    JmeCancelRaceCommandReferences references;
+    string commandVersion;
+    string processId;
+  }
+}
