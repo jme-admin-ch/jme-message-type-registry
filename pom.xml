@@ -31,7 +31,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
-    <groupId>ch.admin.bit.jme</groupId>
+    <groupId>ch.admin.bit.jeap.jme</groupId>
     <artifactId>jme-message-type-registry</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>pom</packaging>
@@ -121,7 +121,7 @@
                             <generateAllMessageTypes>true</generateAllMessageTypes>
                             <gitUrl>https://bitbucket.bit.admin.ch/scm/bit_jme/jme-message-type-registry.git</gitUrl>
                             <jeapMessagingVersion>${jeap-messaging.version}</jeapMessagingVersion>
-                            <groupIdPrefix>ch.admin.bit.jme.messagetype</groupIdPrefix>
+                            <groupIdPrefix>ch.admin.bit.jeap.jme.messagetype</groupIdPrefix>
                             <trunkBranchName>master</trunkBranchName>
                             <skip>${jeap.messagetypes.compile.skip}</skip>
                             <pomTemplateFile>messagetype.template.pom.xml</pomTemplateFile>
