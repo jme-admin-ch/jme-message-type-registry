@@ -118,7 +118,7 @@
                             <goal>compile-message-types</goal>
                         </goals>
                         <configuration>
-                            <generateAllMessageTypes>true</generateAllMessageTypes>
+                            <generateAllMessageTypes>false</generateAllMessageTypes>
                             <gitUrl>https://bitbucket.bit.admin.ch/scm/bit_jme/jme-message-type-registry.git</gitUrl>
                             <jeapMessagingVersion>${jeap-messaging.version}</jeapMessagingVersion>
                             <groupIdPrefix>ch.admin.bit.jeap.jme.messagetype</groupIdPrefix>
