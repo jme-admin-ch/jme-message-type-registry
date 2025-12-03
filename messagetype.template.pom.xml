@@ -185,7 +185,7 @@
                         <executions>
                             <execution>
                                 <id>after-publish-validation-deploy</id>
-                                <phase>deploy</phase>
+                                <phase>none</phase>
                                 <goals>
                                     <goal>deploy</goal>
                                 </goals>
