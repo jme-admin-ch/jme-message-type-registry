@@ -27,7 +27,7 @@
     <parent>
         <groupId>ch.admin.bit.jeap</groupId>
         <artifactId>jeap-spring-boot-parent</artifactId>
-        <version>29.4.0</version>
+        <version>30.2.0</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
@@ -40,7 +40,8 @@
         <jeap.messagetypes.compile.skip>false</jeap.messagetypes.compile.skip>
         <!-- Do not deploy the pom artifact for jme-message-type-registry, this pom is only used to control the build -->
         <maven.deploy.skip>true</maven.deploy.skip>
-        <java.version>21</java.version>
+        <java.version>25</java.version>
+        <maven.compiler.release>25</maven.compiler.release>
     </properties>
 
     <dependencies>
