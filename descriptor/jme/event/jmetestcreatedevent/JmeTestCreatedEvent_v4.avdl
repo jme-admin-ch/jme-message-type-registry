@@ -1,0 +1,21 @@
+@namespace("ch.admin.bit.jme.messaging.event.test.created")
+protocol JmeTestCreatedEventProtocol {
+	import idl "DomainEventBaseTypes.avdl";
+
+	record JmeTestCreatedPayload {
+		string? testField = "test-value";
+		string? testField2 = "test-value2";
+        string? testField3 = "test-value3";
+        string? testField4 = "test-value4";
+	}
+
+	record JmeTestCreatedEvent {
+		ch.admin.bit.jeap.domainevent.avro.AvroDomainEventIdentity identity;
+		ch.admin.bit.jeap.domainevent.avro.AvroDomainEventType type;
+		ch.admin.bit.jeap.domainevent.avro.AvroDomainEventPublisher publisher;
+		ch.admin.bit.jeap.domainevent.avro.AvroDomainEventUser? user = null;
+		JmeTestCreatedPayload payload;
+		string domainEventVersion;
+		string processId;
+	}
+}
