@@ -18,6 +18,11 @@
       "version": "0.0.3",
       "valueSchema": "JmeTestCreatedEvent_v3.avdl",
       "compatibilityMode": "FULL"
+    },
+    {
+      "version": "0.0.4",
+      "valueSchema": "JmeTestCreatedEvent_v4.avdl",
+      "compatibilityMode": "FULL"
     }
   ]
 }
