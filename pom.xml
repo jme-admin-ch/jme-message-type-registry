@@ -85,6 +85,7 @@
                 <version>${jeap-messaging.version}</version>
                 <configuration>
                     <gitUrl>https://github.com/jme-admin-ch/jme-message-type-registry.git</gitUrl>
+                    <trunkBranchName>main</trunkBranchName>
                 </configuration>
                 <executions>
                     <execution>
