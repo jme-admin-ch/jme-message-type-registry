@@ -1,0 +1,27 @@
+@namespace("ch.admin.bit.jme.transit")
+protocol JmeCreateTransitDocumentCommandProtocol {
+  import idl "MessagingBaseTypes.avdl";
+
+  record CreateTransitDocumentReferences {
+  }
+
+  record CreateTransitDocumentPayload {
+    string transitDocumentId;
+    string movementReferenceNumber;
+    string declarantId;
+    string departureOffice;
+    string destinationOffice;
+    string goodsDescription;
+    string remarks;
+  }
+
+  record JmeCreateTransitDocumentCommand {
+    ch.admin.bit.jeap.messaging.avro.AvroMessageIdentity identity;
+    ch.admin.bit.jeap.messaging.avro.AvroMessageType type;
+    ch.admin.bit.jeap.messaging.avro.AvroMessagePublisher publisher;
+    CreateTransitDocumentReferences references;
+    CreateTransitDocumentPayload payload;
+    union {null, string} processId = null;
+    string commandVersion = "1.0.0";
+  }
+}
