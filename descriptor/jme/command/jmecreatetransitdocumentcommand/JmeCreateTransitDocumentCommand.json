@@ -1,0 +1,14 @@
+{
+  "commandName": "JmeCreateTransitDocumentCommand",
+  "definingSystem": "JME",
+  "description": "Initiate the creation of a transit document (OpenSearch example service).",
+  "topic": "jme-create-transit-document",
+  "scope": "internal",
+  "versions": [
+    {
+      "version": "1.0.0",
+      "valueSchema": "JmeCreateTransitDocumentCommand_v1.0.0.avdl",
+      "compatibilityMode": "FULL"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "eventName": "JmeTransitDecisionCreatedEvent",
+  "publishingSystem": "JME",
+  "description": "Notification that a decision on a transit document has been made (OpenSearch example service).",
+  "topic": "jme-transit-decision-created",
+  "scope": "internal",
+  "versions": [
+    {
+      "version": "1.0.0",
+      "valueSchema": "JmeTransitDecisionCreatedEvent_v1.0.0.avdl",
+      "compatibilityMode": "FULL"
+    }
+  ]
+}

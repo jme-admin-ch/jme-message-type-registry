@@ -1,0 +1,41 @@
+@namespace("ch.admin.bit.jme.transit")
+protocol JmeTransitDecisionCreatedEventProtocol {
+  import idl "DomainEventBaseTypes.avdl";
+
+  record JmeTransitDocumentReference {
+    string type = "TransitDocument";
+    string id;
+  }
+
+  record JmeTransitDecisionReference {
+    string type = "TransitDecision";
+    string id;
+  }
+
+  record JmeTransitDecisionCreatedEventReferences {
+    JmeTransitDocumentReference transitDocument;
+    JmeTransitDecisionReference newTransitDecision;
+  }
+
+  enum JmeTransitDecisionStatus {
+    APPROVED, REJECTED, INSPECTION_REQUIRED
+  }
+
+  record JmeTransitDecisionCreatedEventPayload {
+    string transitDecisionId;
+    JmeTransitDecisionStatus status;
+    string remarks;
+    string decidedBy;
+    timestamp_ms decisionDate;
+  }
+
+  record JmeTransitDecisionCreatedEvent {
+    ch.admin.bit.jeap.domainevent.avro.AvroDomainEventIdentity identity;
+    ch.admin.bit.jeap.domainevent.avro.AvroDomainEventType type;
+    ch.admin.bit.jeap.domainevent.avro.AvroDomainEventPublisher publisher;
+    JmeTransitDecisionCreatedEventReferences references;
+    JmeTransitDecisionCreatedEventPayload payload;
+    string processId;
+    string domainEventVersion = "1.0.0";
+  }
+}
