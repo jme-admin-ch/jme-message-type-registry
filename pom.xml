@@ -107,7 +107,7 @@
             <plugin>
                 <groupId>ch.admin.bit.jeap</groupId>
                 <artifactId>jeap-messaging-avro-maven-plugin</artifactId>
-                <version>${jeap-messaging.version}</version>
+                <version>15.8.0-feature-JEAP-6634-SNAPSHOT</version>
                 <executions>
                     <execution>
                         <!-- Disable default execution from parent -->
