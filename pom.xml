@@ -40,7 +40,7 @@
         <jeap.messagetypes.compile.skip>false</jeap.messagetypes.compile.skip>
         <!-- Do not deploy the pom artifact for jme-message-type-registry, this pom is only used to control the build -->
         <maven.deploy.skip>true</maven.deploy.skip>
-        <jeap-messaging.version>15.7.0-feature-JEAP-6634-SNAPSHOT</jeap-messaging.version>
+        <jeap-messaging.version>15.8.0</jeap-messaging.version>
     </properties>
 
     <dependencies>
