@@ -2,7 +2,6 @@
   "eventName": "JmeDeclarationCreatedEvent",
   "publishingSystem": "JME",
   "description": "Customs declaration created event",
-  "documentationUrl": "https://confluence.bit.admin.ch/display/JEAP/JmeDeclarationCreatedEvent",
   "topic": "jme-messaging-declaration-created",
   "scope": "internal",
   "versions": [

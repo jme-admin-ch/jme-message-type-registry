@@ -2,7 +2,6 @@
   "eventName": "JmeDocumentVersionReviewedEvent",
   "publishingSystem": "JME",
   "description": "Notification that a document version has been reviewed.",
-  "documentationUrl": "https://confluence.bit.admin.ch/display/JEAP/TODO",
   "topic": "jme-document-version-reviewed",
   "scope": "internal",
   "versions": [

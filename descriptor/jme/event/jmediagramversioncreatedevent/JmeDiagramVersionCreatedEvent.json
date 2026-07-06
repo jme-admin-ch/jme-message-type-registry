@@ -2,7 +2,6 @@
   "eventName": "JmeDiagramVersionCreatedEvent",
   "publishingSystem": "JME",
   "description": "Notification that a new diagram version has been created.",
-  "documentationUrl": "https://confluence.bit.admin.ch/display/JEAP/TODO",
   "topic": "jme-process-archive-diagramversioncreated",
   "scope": "internal",
   "versions": [

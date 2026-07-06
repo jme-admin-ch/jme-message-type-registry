@@ -2,7 +2,6 @@
   "commandName": "JmeCreateDeclarationV2Command",
   "definingSystem": "JME",
   "description": "Initiate the creation of a customs declaration.",
-  "documentationUrl": "https://confluence.bit.admin.ch/display/JEAP/JmeCreateDeclarationCommand",
   "topic": "jme-messaging-create-declaration-v2",
   "scope": "public",
   "versions": [

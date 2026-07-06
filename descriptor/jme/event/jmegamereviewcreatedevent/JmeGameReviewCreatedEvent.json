@@ -2,7 +2,6 @@
   "eventName": "JmeGameReviewCreatedEvent",
   "publishingSystem": "JME",
   "description": "A game review has been created",
-  "documentationUrl": "https://confluence.bit.admin.ch/display/JEAP/JmeGameReviewCreatedEvent",
   "topic": "jme-crypto-game-review-created",
   "scope": "internal",
   "versions": [

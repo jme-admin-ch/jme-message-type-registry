@@ -2,7 +2,6 @@
   "eventName": "JmeDocumentVersionCreatedEvent",
   "publishingSystem": "JME",
   "description": "Notification that a new version of a document has been created",
-  "documentationUrl": "https://confluence.bit.admin.ch/display/JEAP/TODO",
   "topic": "jme-document-version-created",
   "scope": "internal",
   "versions": [

@@ -1,4 +1,4 @@
-See [Message Type Registry](https://confluence.bit.admin.ch/display/JEAP/Message+Type+Registry)
+See [Message Type Registry](https://jeap-admin-ch.github.io/docs/building-blocks/libraries/jeap-messaging/message-type-registry)
 
 This message type registry contains message types produced or consumed by JME services.
 
