@@ -1,0 +1,29 @@
+@namespace("ch.admin.bit.jeap.jme.reactionobserver.event.order.submitted")
+protocol JmeRosOrderSubmittedEventProtocol {
+  import idl "DomainEventBaseTypes.avdl";
+  import idl "ch.admin.bit.jme.messaging.OrderReference.avdl";
+
+  record JmeRosOrderSubmittedReferences {
+    ch.admin.bit.jme.messaging.OrderReference order;
+  }
+
+  record JmeRosOrderSubmittedPayload {
+    string partnerId;
+    string productId;
+    int quantity;
+    // Demo switch: the external rating service answers only after the timeout of the order service
+    boolean simulateSlowRating = false;
+    // Demo switch: the partner service fails with a rollback after having written the credit reservation
+    boolean simulateFailedReservation = false;
+  }
+
+  record JmeRosOrderSubmittedEvent {
+    ch.admin.bit.jeap.domainevent.avro.AvroDomainEventIdentity identity;
+    ch.admin.bit.jeap.domainevent.avro.AvroDomainEventType type;
+    ch.admin.bit.jeap.domainevent.avro.AvroDomainEventPublisher publisher;
+    JmeRosOrderSubmittedReferences references;
+    JmeRosOrderSubmittedPayload payload;
+    string domainEventVersion;
+    union {null, string} processId = null;
+  }
+}

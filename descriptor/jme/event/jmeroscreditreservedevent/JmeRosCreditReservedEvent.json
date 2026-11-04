@@ -1,0 +1,13 @@
+{
+  "eventName": "JmeRosCreditReservedEvent",
+  "description": "Credit of a partner reserved for an order by the partner service of the reaction observer service example.",
+  "definingSystem": "JME",
+  "scope": "internal",
+  "topic": "jme-ros-credit-reserved",
+  "versions": [
+    {
+      "version": "1.0.0",
+      "valueSchema": "JmeRosCreditReservedEvent_v1.0.0.avdl"
+    }
+  ]
+}

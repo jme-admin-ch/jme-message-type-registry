@@ -1,0 +1,29 @@
+@namespace("ch.admin.bit.jeap.jme.reactionobserver.event.order.checked")
+protocol JmeRosOrderCheckedEventProtocol {
+  import idl "DomainEventBaseTypes.avdl";
+  import idl "ch.admin.bit.jme.messaging.OrderReference.avdl";
+
+  record JmeRosOrderCheckedReferences {
+    ch.admin.bit.jme.messaging.OrderReference order;
+  }
+
+  enum JmeRosOrderCheckResult {
+    ACCEPTED,
+    REJECTED,
+    REVIEW_REQUIRED
+  } = REVIEW_REQUIRED;
+
+  record JmeRosOrderCheckedPayload {
+    JmeRosOrderCheckResult result;
+  }
+
+  record JmeRosOrderCheckedEvent {
+    ch.admin.bit.jeap.domainevent.avro.AvroDomainEventIdentity identity;
+    ch.admin.bit.jeap.domainevent.avro.AvroDomainEventType type;
+    ch.admin.bit.jeap.domainevent.avro.AvroDomainEventPublisher publisher;
+    JmeRosOrderCheckedReferences references;
+    JmeRosOrderCheckedPayload payload;
+    string domainEventVersion;
+    union {null, string} processId = null;
+  }
+}

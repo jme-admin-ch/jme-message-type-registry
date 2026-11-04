@@ -1,0 +1,13 @@
+{
+  "eventName": "JmeRosOrderCheckedEvent",
+  "description": "Order checked by the order service of the reaction observer service example.",
+  "definingSystem": "JME",
+  "scope": "internal",
+  "topic": "jme-ros-order-checked",
+  "versions": [
+    {
+      "version": "1.0.0",
+      "valueSchema": "JmeRosOrderCheckedEvent_v1.0.0.avdl"
+    }
+  ]
+}

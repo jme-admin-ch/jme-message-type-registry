@@ -1,0 +1,26 @@
+@namespace("ch.admin.bit.jeap.jme.reactionobserver.event.credit.reserved")
+protocol JmeRosCreditReservedEventProtocol {
+  import idl "DomainEventBaseTypes.avdl";
+  import idl "ch.admin.bit.jme.messaging.OrderReference.avdl";
+
+  record JmeRosCreditReservedReferences {
+    ch.admin.bit.jme.messaging.OrderReference order;
+  }
+
+  record JmeRosCreditReservedPayload {
+    string reservationId;
+    string partnerId;
+    // Reserved amount in whole CHF
+    int amount;
+  }
+
+  record JmeRosCreditReservedEvent {
+    ch.admin.bit.jeap.domainevent.avro.AvroDomainEventIdentity identity;
+    ch.admin.bit.jeap.domainevent.avro.AvroDomainEventType type;
+    ch.admin.bit.jeap.domainevent.avro.AvroDomainEventPublisher publisher;
+    JmeRosCreditReservedReferences references;
+    JmeRosCreditReservedPayload payload;
+    string domainEventVersion;
+    union {null, string} processId = null;
+  }
+}
